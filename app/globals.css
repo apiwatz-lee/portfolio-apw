@@ -3,3 +3,7 @@
 * {
   font-family: Outfit;
 }
+
+@theme {
+  --color-lightHover: '#fcf4ff';
+}
