@@ -18,10 +18,9 @@ const Header = () => {
       <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-ovo max-w-3xl'>
         Full Stack Developer
       </h1>
-      <p className='max-w-2xl mx-auto font-ovo'>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
-        reiciendis facere molestiae recusandae distinctio cupiditate alias
-        itaque nemo exercitationem asperiores?
+      <p className='max-w-lg mx-auto font-ovo'>
+        crafting modern, scalable web applications with a strong focus on
+        performance and craftsmanship.
       </p>
 
       <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>

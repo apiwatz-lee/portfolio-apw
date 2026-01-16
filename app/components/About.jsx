@@ -18,11 +18,10 @@ const About = () => {
         </div>
         <div className='flex-1'>
           <p className='mb-10 max-w-2xl font-ovo'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi esse
-            enim, doloribus ut ab vel deserunt sunt minus modi unde eius aut a
-            quam dicta ad aperiam voluptatum magni repudiandae vitae veritatis
-            qui quaerat alias eum? Dolore iusto distinctio nostrum ex, quo
-            debitis a ut neque asperiores iure voluptatum perspiciatis.
+            I am a developer who transitioned from business operations into
+            software development, combining analytical thinking with modern web
+            technologies. My expertise lies in building performant, scalable web
+            applications.
           </p>
 
           <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>

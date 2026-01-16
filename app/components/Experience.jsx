@@ -14,19 +14,19 @@ export default function AlternateReverseTimeline() {
       title:
         'Web Developer at The Thai Chamber of Commerce and Board of Trade of Thailand',
       description:
-        'Revamped the organization website, improving user experience and performance using NuxtJs.',
+        'Revamped and modernized the organization’s main website using Nuxt.js, focusing on performance optimization, responsive design, and improved user experience.',
     },
     {
       time: '2024 - 2025',
       title: 'Full Stack Developer at Xsurface Co., Ltd.',
       description:
-        'Developed and maintained an E-commerce web applications using MERN Stacks.',
+        'Developed and maintained scalable E-commerce web applications using the MERN stack (MongoDB, Express.js, React, Node.js).Implemented authentication, API integrations, and optimized application performance for real-world business use.',
     },
     {
       time: '2019 - 2024',
       title: 'Procurement Supervisor at Southland Rubber Co., Ltd.',
       description:
-        'Data analytics on raw material purchasing and inventory management.',
+        'Led procurement operations and performed data analysis on raw material purchasing and inventory management to improve cost efficiency and decision-making. Gained strong business domain knowledge that later supported my transition into software development.',
     },
   ];
 
