@@ -10,7 +10,8 @@ const Navbar = () => {
   const menu = [
     { name: 'Home', href: '#header' },
     { name: 'About me', href: '#about' },
-    { name: 'Services', href: '#services' },
+    { name: 'Experiences', href: '#experiences' },
+    // { name: 'Services', href: '#services' },
     { name: 'My work', href: '#work' },
     { name: 'Contact me', href: '#contact' },
   ];

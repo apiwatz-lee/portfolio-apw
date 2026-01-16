@@ -10,20 +10,26 @@ import { useMediaQuery } from '@mui/material';
 export default function AlternateReverseTimeline() {
   const timelineItems = [
     {
-      time: '2025 - Present',
+      time: 'May 2025 - Present',
       title:
         'Web Developer at The Thai Chamber of Commerce and Board of Trade of Thailand',
       description:
         'Revamped and modernized the organization’s main website using Nuxt.js, focusing on performance optimization, responsive design, and improved user experience.',
     },
     {
-      time: '2024 - 2025',
+      time: 'Jan 2024 - May 2025',
       title: 'Full Stack Developer at Xsurface Co., Ltd.',
       description:
         'Developed and maintained scalable E-commerce web applications using the MERN stack (MongoDB, Express.js, React, Node.js).Implemented authentication, API integrations, and optimized application performance for real-world business use.',
     },
     {
-      time: '2019 - 2024',
+      time: 'Jun 2023 - Oct 2023',
+      title: 'TechUp Bootcamp - Full Stack Web Development Student',
+      description:
+        'Completed an intensive full-stack web development bootcamp covering front-end and back-end technologies, including HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Built multiple projects to demonstrate practical skills and understanding of web development concepts.',
+    },
+    {
+      time: 'Sep 2019 - Jun 2023',
       title: 'Procurement Supervisor at Southland Rubber Co., Ltd.',
       description:
         'Led procurement operations and performed data analysis on raw material purchasing and inventory management to improve cost efficiency and decision-making. Gained strong business domain knowledge that later supported my transition into software development.',
@@ -33,7 +39,7 @@ export default function AlternateReverseTimeline() {
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
-    <Container className='text-center'>
+    <Container id='experiences' className='text-center'>
       <h4 className='text-center mb-2 text-lg font-ovo'>My working </h4>
       <h2 className='text-center text-5xl font-ovo'>Experiences</h2>
       <Timeline
