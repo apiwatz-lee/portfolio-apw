@@ -156,3 +156,101 @@ export const toolsData = [
   assets.figma,
   assets.git,
 ];
+
+export const skills = [
+  {
+    name: 'HTML',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+    logo: 'https://cdn.simpleicons.org/html5',
+  },
+  {
+    name: 'CSS',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+    logo: 'https://img-resize-cdn.joshmartin.ch/768x0%2Cc3537b9f46b5f6055fbc8b4cd03b6b2cc63fc2eefd3d8cd9f0c9f99a5933e496/https://joshmartin.ch/app/uploads/2017/10/css3.svg',
+  },
+  {
+    name: 'JavaScript',
+    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+    logo: 'https://cdn.simpleicons.org/javascript',
+  },
+  {
+    name: 'TypeScript',
+    link: 'https://www.typescriptlang.org/',
+    logo: 'https://cdn.simpleicons.org/typescript',
+  },
+  {
+    name: 'React',
+    link: 'https://react.dev/',
+    logo: 'https://cdn.simpleicons.org/react',
+  },
+  {
+    name: 'Next.js',
+    link: 'https://nextjs.org/',
+    logo: 'https://cdn.simpleicons.org/nextdotjs',
+  },
+  {
+    name: 'Vue.js',
+    link: 'https://vuejs.org/',
+    logo: 'https://cdn.simpleicons.org/vuedotjs',
+  },
+  {
+    name: 'Nuxt.js',
+    link: 'https://nuxt.com/',
+    logo: 'https://nuxt.com/assets/design-kit/icon-green.svg',
+  },
+  {
+    name: 'Node.js',
+    link: 'https://nodejs.org/',
+    logo: 'https://cdn.simpleicons.org/nodedotjs',
+  },
+  {
+    name: 'Express.js',
+    link: 'https://expressjs.com/',
+    logo: 'https://cdn.simpleicons.org/express',
+  },
+  {
+    name: 'MongoDB',
+    link: 'https://www.mongodb.com/',
+    logo: 'https://cdn.simpleicons.org/mongodb',
+  },
+  {
+    name: 'PostgreSQL',
+    link: 'https://www.postgresql.org/',
+    logo: 'https://cdn.simpleicons.org/postgresql',
+  },
+  {
+    name: 'Git',
+    link: 'https://git-scm.com/',
+    logo: 'https://cdn.simpleicons.org/git',
+  },
+  {
+    name: 'Postman',
+    link: 'https://www.postman.com/',
+    logo: 'https://cdn.simpleicons.org/postman',
+  },
+  {
+    name: 'Docker',
+    link: 'https://www.docker.com/',
+    logo: 'https://cdn.simpleicons.org/docker',
+  },
+  {
+    name: 'Strapi',
+    link: 'https://strapi.io/',
+    logo: 'https://cdn.simpleicons.org/strapi',
+  },
+  {
+    name: 'Supabase',
+    link: 'https://supabase.com/',
+    logo: 'https://cdn.simpleicons.org/supabase',
+  },
+  {
+    name: 'AWS',
+    link: 'https://aws.amazon.com/',
+    logo: 'https://download.logo.wine/logo/Amazon_Web_Services/Amazon_Web_Services-Logo.wine.png',
+  },
+  {
+    name: 'Linux',
+    link: 'https://www.linux.org/',
+    logo: 'https://cdn.simpleicons.org/linux',
+  },
+];

@@ -1,6 +1,7 @@
-import { assets, infoList, toolsData } from '@/assets/assets';
+import { assets, infoList, toolsData, skills } from '@/assets/assets';
 import Image from 'next/image';
 import Container from '@mui/material/Container';
+import apwCover from '@/public/apw-cover2.jpg';
 
 const About = () => {
   return (
@@ -10,11 +11,7 @@ const About = () => {
 
       <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
         <div className='w-64 sm:w-80 rounded-3xl max-w-none'>
-          <Image
-            src={assets.user_image}
-            alt=''
-            className='w-full rounded-3xl'
-          />
+          <Image src={apwCover} alt='' className='w-full rounded-3xl' />
         </div>
         <div className='flex-1'>
           <p className='mb-10 max-w-2xl font-ovo'>
@@ -39,14 +36,17 @@ const About = () => {
 
           <h4 className='my-6 text-gray-700 font-ovo'>Tools I use</h4>
 
-          <ul className='flex items-center gap-3 sm:gap-5'>
-            {toolsData.map((tool, index) => (
-              <li
+          <ul className='flex items-center gap-3 sm:gap-5 flex-wrap'>
+            {skills.map(({ logo, name, link }, index) => (
+              <a
                 key={index}
-                className='flex items-center justify-center w-12 sm:w-14 aspect-square border rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-md'
+                className='flex items-center justify-center w-12 sm:w-14 aspect-square rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-md'
+                href={link}
+                target='_blank'
               >
-                <Image src={tool} alt='tools' className='w-5 sm:w-7' />
-              </li>
+                <img src={logo} alt={name} />
+                {/* <Image src={logo} alt='tools' className='w-5 sm:w-7' /> */}
+              </a>
             ))}
           </ul>
         </div>

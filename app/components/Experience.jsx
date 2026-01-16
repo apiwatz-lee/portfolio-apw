@@ -52,7 +52,7 @@ export default function AlternateReverseTimeline() {
         }}
       >
         {timelineItems.map((item, index) => (
-          <TimelineItem key={index} class='hidden md:block'>
+          <TimelineItem key={index} className='hidden md:block'>
             <TimelineSeparator>
               <TimelineDot />
               {index < timelineItems.length - 1 && <TimelineConnector />}

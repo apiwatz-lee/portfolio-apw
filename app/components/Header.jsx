@@ -1,6 +1,7 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
 import Container from '@mui/material/Container';
+import apw from '@/public/apw-cover.png';
 
 const Header = () => {
   return (
@@ -9,13 +10,13 @@ const Header = () => {
       className=' flex flex-col items-center justify-center gap-4 w-full text-center min-h-screen py-20'
     >
       <div>
-        <Image src={assets.profile_img} alt='' className='rounded-full w-32' />
+        <Image src={apw} alt='' className='rounded-full w-32' />
       </div>
       <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo'>
         Hi! I'm Aphiwat Leelasawatsuk{' '}
         <Image src={assets.hand_icon} alt='' className='w-6' />
       </h3>
-      <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-ovo max-w-3xl'>
+      <h1 className='text-3xl sm:text-6xl font-ovo max-w-3xl'>
         Full Stack Developer
       </h1>
       <p className='max-w-lg mx-auto font-ovo'>
