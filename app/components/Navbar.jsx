@@ -35,7 +35,7 @@ const Navbar = () => {
         <Image src={assets.header_bg_color} alt='' />
       </div>
       <div
-        className={`sticky top-0 ${
+        className={`sticky top-0 z-50 ${
           isScroll ? 'bg-white/50 backdrop-blur-lg' : ''
         }`}
       >
