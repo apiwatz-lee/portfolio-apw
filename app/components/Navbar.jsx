@@ -22,6 +22,10 @@ const Navbar = () => {
         setIsScroll(false);
       }
     });
+
+    return () => {
+      window.removeEventListener('scroll', () => {});
+    };
   }, []);
 
   return (
@@ -34,12 +38,8 @@ const Navbar = () => {
           isScroll && 'bg-white/50 backdrop-blur-lg'
         }`}
       >
-        <a href='#top'>
-          <Image
-            src={assets.logo}
-            alt=''
-            className='w-28 cursor-pointer mr-14'
-          />
+        <a href='#top' className='font-black text-xl'>
+          APW
         </a>
 
         <ul
