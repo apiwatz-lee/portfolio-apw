@@ -12,11 +12,11 @@ const Services = () => {
         adipisci? Sed assumenda impedit atque eaque autem maxime totam,
       </p>
 
-      <div className='flex justify-center lg:justify-start items-center flex-wrap gap-6 my-10'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-10'>
         {serviceData.map(({ icon, title, description, link }, index) => (
           <div
             key={index}
-            className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black  cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 max-w-62'
+            className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black  cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500'
           >
             <Image src={icon} alt='' className='w-10' />
             <h3 className='text-lg my-4 text-gray-700'>{title}</h3>
