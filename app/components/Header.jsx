@@ -4,7 +4,10 @@ import Container from '@mui/material/Container';
 
 const Header = () => {
   return (
-    <Container className=' flex flex-col items-center justify-center gap-4 w-full text-center h-screen'>
+    <Container
+      id='header'
+      className=' flex flex-col items-center justify-center gap-4 w-full text-center h-screen'
+    >
       <div>
         <Image src={assets.profile_img} alt='' className='rounded-full w-32' />
       </div>

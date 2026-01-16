@@ -8,7 +8,7 @@ const Navbar = () => {
   const sideMenuRef = useRef();
 
   const menu = [
-    { name: 'Home', href: '#top' },
+    { name: 'Home', href: '#header' },
     { name: 'About me', href: '#about' },
     { name: 'Services', href: '#services' },
     { name: 'My work', href: '#work' },
@@ -17,10 +17,24 @@ const Navbar = () => {
 
   const openMenu = () => {
     sideMenuRef.current.style.transform = 'translateX(-16rem)';
+    document.body.style.overflow = 'hidden';
   };
 
   const closeMenu = () => {
     sideMenuRef.current.style.transform = 'translateX(16rem)';
+    document.body.style.overflow = 'auto';
+  };
+
+  const scrollTo = (refName) => {
+    const el = document.getElementById(refName);
+
+    const yOffset = -80;
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth',
+    });
   };
 
   useEffect(() => {
@@ -43,27 +57,32 @@ const Navbar = () => {
         <Image src={assets.header_bg_color} alt='' />
       </div>
       <div
-        className={`sticky top-0 z-50 ${
-          isScroll ? 'bg-white/50 backdrop-blur-lg' : ''
-        }`}
+        className={`fixed top-0 right-0 z-50 w-full 
+          ${isScroll ? 'bg-white/50 backdrop-blur-lg' : ''}
+          
+        `}
       >
         <Container
           component='nav'
           className={` w-full py-4 flex items-center justify-between z-50 `}
         >
-          <a href='#top' className='font-black text-xl'>
-            APW
+          <a href='#header' className='font-black text-xl'>
+            APW.
           </a>
 
           <ul
-            className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
-              !isScroll && 'bg-white/50 shadow-sm backdrop-blur-sm'
-            } `}
+            className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 
+              ${!isScroll && 'bg-white/50 shadow-sm backdrop-blur-sm'} 
+              
+            `}
           >
             {menu.map(({ name, href }, index) => {
               return (
                 <li key={index}>
-                  <a className='font-ovo' href={href}>
+                  <a
+                    className='font-ovo'
+                    onClick={() => scrollTo(href.substring(1))}
+                  >
                     {name}
                   </a>
                 </li>
@@ -85,7 +104,7 @@ const Navbar = () => {
 
           <ul
             ref={sideMenuRef}
-            className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500'
+            className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-white transition duration-500'
           >
             <div className='absolute top-6 right-6' onClick={closeMenu}>
               <Image
