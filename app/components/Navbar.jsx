@@ -7,6 +7,14 @@ const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
   const sideMenuRef = useRef();
 
+  const menu = [
+    { name: 'Home', href: '#top' },
+    { name: 'About me', href: '#about' },
+    { name: 'Services', href: '#services' },
+    { name: 'My work', href: '#work' },
+    { name: 'Contact me', href: '#contact' },
+  ];
+
   const openMenu = () => {
     sideMenuRef.current.style.transform = 'translateX(-16rem)';
   };
@@ -52,35 +60,15 @@ const Navbar = () => {
               !isScroll && 'bg-white/50 shadow-sm backdrop-blur-sm'
             } `}
           >
-            <li>
-              <a className='font-ovo' href='#top'>
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a className='font-ovo' href='#about'>
-                About me
-              </a>
-            </li>
-
-            <li>
-              <a className='font-ovo' href='#services'>
-                Services
-              </a>
-            </li>
-
-            <li>
-              <a className='font-ovo' href='#work'>
-                My work
-              </a>
-            </li>
-
-            <li>
-              <a className='font-ovo' href='#contact'>
-                Contact me
-              </a>
-            </li>
+            {menu.map(({ name, href }, index) => {
+              return (
+                <li key={index}>
+                  <a className='font-ovo' href={href}>
+                    {name}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
 
           <div className='flex items-center gap-4'>
@@ -107,35 +95,15 @@ const Navbar = () => {
               />
             </div>
 
-            <li>
-              <a className='font-ovo' href='#top' onClick={closeMenu}>
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a className='font-ovo' href='#about' onClick={closeMenu}>
-                About me
-              </a>
-            </li>
-
-            <li>
-              <a className='font-ovo' href='#services' onClick={closeMenu}>
-                Services
-              </a>
-            </li>
-
-            <li>
-              <a className='font-ovo' href='#work' onClick={closeMenu}>
-                My work
-              </a>
-            </li>
-
-            <li>
-              <a className='font-ovo' href='#contact' onClick={closeMenu}>
-                Contact me
-              </a>
-            </li>
+            {menu.map(({ name, href }, index) => {
+              return (
+                <li key={index}>
+                  <a className='font-ovo' href={href} onClick={closeMenu}>
+                    {name}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </Container>
       </div>
