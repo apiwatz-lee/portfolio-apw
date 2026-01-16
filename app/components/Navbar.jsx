@@ -68,7 +68,7 @@ const Navbar = () => {
           className={` w-full py-4 flex items-center justify-between z-50 `}
         >
           <a href='#header' className='font-black text-xl'>
-            APW.
+            APWZ.
           </a>
 
           <ul
