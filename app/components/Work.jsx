@@ -1,9 +1,10 @@
 import { assets, workData } from '@/assets/assets';
+import { Container } from '@mui/material';
 import Image from 'next/image';
 
 const Work = () => {
   return (
-    <div id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
+    <Container id='work' className='py-10'>
       <h4 className='text-center mb-2 text-lg font-ovo'>My Portfolio </h4>
       <h2 className='text-center text-5xl font-ovo'>My latest work</h2>
 
@@ -31,7 +32,7 @@ const Work = () => {
           </div>
         ))}
       </div>
-    </div>
+    </Container>
   );
 };
 

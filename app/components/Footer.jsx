@@ -2,10 +2,11 @@ import React from 'react';
 import EmailIcon from '@mui/icons-material/Email';
 import Divider from '@mui/material/Divider';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import Container from '@mui/material/Container';
 
 const Footer = () => {
   return (
-    <div className='container mx-auto py-4'>
+    <Container className='py-4'>
       <div className='text-center'>APW</div>
       <div className='text-center'>
         <EmailIcon /> apiwatz.lee@gmail.com
@@ -18,7 +19,7 @@ const Footer = () => {
           Made with <FavoriteIcon fontSize='small' />
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

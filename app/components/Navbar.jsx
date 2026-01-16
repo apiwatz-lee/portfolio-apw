@@ -34,107 +34,111 @@ const Navbar = () => {
       <div className='fixed top-0 right-0 -z-10 '>
         <Image src={assets.header_bg_color} alt='' />
       </div>
-      <Container
-        component='nav'
-        className={`sticky top-0 w-full py-4 flex items-center justify-between z-50 ${
-          isScroll && 'bg-white/50 backdrop-blur-lg'
+      <div
+        className={`sticky top-0 ${
+          isScroll ? 'bg-white/50 backdrop-blur-lg' : ''
         }`}
       >
-        <a href='#top' className='font-black text-xl'>
-          APW
-        </a>
-
-        <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
-            !isScroll && 'bg-white/50 shadow-sm backdrop-blur-sm'
-          } `}
+        <Container
+          component='nav'
+          className={` w-full py-4 flex items-center justify-between z-50 `}
         >
-          <li>
-            <a className='font-ovo' href='#top'>
-              Home
-            </a>
-          </li>
+          <a href='#top' className='font-black text-xl'>
+            APW
+          </a>
 
-          <li>
-            <a className='font-ovo' href='#about'>
-              About me
-            </a>
-          </li>
+          <ul
+            className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
+              !isScroll && 'bg-white/50 shadow-sm backdrop-blur-sm'
+            } `}
+          >
+            <li>
+              <a className='font-ovo' href='#top'>
+                Home
+              </a>
+            </li>
 
-          <li>
-            <a className='font-ovo' href='#services'>
-              Services
-            </a>
-          </li>
+            <li>
+              <a className='font-ovo' href='#about'>
+                About me
+              </a>
+            </li>
 
-          <li>
-            <a className='font-ovo' href='#work'>
-              My work
-            </a>
-          </li>
+            <li>
+              <a className='font-ovo' href='#services'>
+                Services
+              </a>
+            </li>
 
-          <li>
-            <a className='font-ovo' href='#contact'>
-              Contact me
-            </a>
-          </li>
-        </ul>
+            <li>
+              <a className='font-ovo' href='#work'>
+                My work
+              </a>
+            </li>
 
-        <div className='flex items-center gap-4'>
-          <button>
-            <Image src={assets.moon_icon} alt='' className='w-6' />
-          </button>
+            <li>
+              <a className='font-ovo' href='#contact'>
+                Contact me
+              </a>
+            </li>
+          </ul>
 
-          <button className='block md:hidden ml-3' onClick={openMenu}>
-            <Image src={assets.menu_black} alt='' className='w-6' />
-          </button>
-        </div>
+          <div className='flex items-center gap-4'>
+            <button>
+              <Image src={assets.moon_icon} alt='' className='w-6' />
+            </button>
 
-        {/* ---------- mobile menu ----------------- */}
-
-        <ul
-          ref={sideMenuRef}
-          className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500'
-        >
-          <div className='absolute top-6 right-6' onClick={closeMenu}>
-            <Image
-              src={assets.close_black}
-              alt=''
-              className='w-5 cursor-pointer'
-            />
+            <button className='block md:hidden ml-3' onClick={openMenu}>
+              <Image src={assets.menu_black} alt='' className='w-6' />
+            </button>
           </div>
 
-          <li>
-            <a className='font-ovo' href='#top' onClick={closeMenu}>
-              Home
-            </a>
-          </li>
+          {/* ---------- mobile menu ----------------- */}
 
-          <li>
-            <a className='font-ovo' href='#about' onClick={closeMenu}>
-              About me
-            </a>
-          </li>
+          <ul
+            ref={sideMenuRef}
+            className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500'
+          >
+            <div className='absolute top-6 right-6' onClick={closeMenu}>
+              <Image
+                src={assets.close_black}
+                alt=''
+                className='w-5 cursor-pointer'
+              />
+            </div>
 
-          <li>
-            <a className='font-ovo' href='#services' onClick={closeMenu}>
-              Services
-            </a>
-          </li>
+            <li>
+              <a className='font-ovo' href='#top' onClick={closeMenu}>
+                Home
+              </a>
+            </li>
 
-          <li>
-            <a className='font-ovo' href='#work' onClick={closeMenu}>
-              My work
-            </a>
-          </li>
+            <li>
+              <a className='font-ovo' href='#about' onClick={closeMenu}>
+                About me
+              </a>
+            </li>
 
-          <li>
-            <a className='font-ovo' href='#contact' onClick={closeMenu}>
-              Contact me
-            </a>
-          </li>
-        </ul>
-      </Container>
+            <li>
+              <a className='font-ovo' href='#services' onClick={closeMenu}>
+                Services
+              </a>
+            </li>
+
+            <li>
+              <a className='font-ovo' href='#work' onClick={closeMenu}>
+                My work
+              </a>
+            </li>
+
+            <li>
+              <a className='font-ovo' href='#contact' onClick={closeMenu}>
+                Contact me
+              </a>
+            </li>
+          </ul>
+        </Container>
+      </div>
     </>
   );
 };
