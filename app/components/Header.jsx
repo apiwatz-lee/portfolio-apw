@@ -1,9 +1,10 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
+import Container from '@mui/material/Container';
 
 const Header = () => {
   return (
-    <div className='w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
+    <Container className=' flex flex-col items-center justify-center gap-4 w-full text-center h-screen'>
       <div>
         <Image src={assets.profile_img} alt='' className='rounded-full w-32' />
       </div>
@@ -11,7 +12,7 @@ const Header = () => {
         Hi! I'm Aphiwat Leelasawatsuk{' '}
         <Image src={assets.hand_icon} alt='' className='w-6' />
       </h3>
-      <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-ovo'>
+      <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-ovo max-w-3xl'>
         frontend web developer based in Bangkok
       </h1>
       <p className='max-w-2xl mx-auto font-ovo'>
@@ -37,7 +38,7 @@ const Header = () => {
           my resume <Image src={assets.download_icon} alt='' className='w-4' />
         </a>
       </div>
-    </div>
+    </Container>
   );
 };
 
