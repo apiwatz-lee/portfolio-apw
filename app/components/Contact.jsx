@@ -9,7 +9,7 @@ const Contact = () => {
         I'd love to hear from you! If you have any questions, comments or
         feedback, please use the form below.
       </div>
-      <form className='py-4 space-y-4'>
+      <form className='py-4 space-y-4 w-full max-w-xl'>
         <div className='flex gap-4'>
           <input
             type='text'

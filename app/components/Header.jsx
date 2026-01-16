@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Container
       id='header'
-      className=' flex flex-col items-center justify-center gap-4 w-full text-center h-screen'
+      className=' flex flex-col items-center justify-center gap-4 w-full text-center min-h-screen py-20'
     >
       <div>
         <Image src={assets.profile_img} alt='' className='rounded-full w-32' />
@@ -16,7 +16,7 @@ const Header = () => {
         <Image src={assets.hand_icon} alt='' className='w-6' />
       </h3>
       <h1 className='text-3xl sm:text-6xl lg:text-[66px] font-ovo max-w-3xl'>
-        frontend web developer based in Bangkok
+        Full Stack Developer
       </h1>
       <p className='max-w-2xl mx-auto font-ovo'>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat

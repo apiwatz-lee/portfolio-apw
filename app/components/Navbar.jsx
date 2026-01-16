@@ -80,7 +80,7 @@ const Navbar = () => {
               return (
                 <li key={index}>
                   <a
-                    className='font-ovo'
+                    className='font-ovo cursor-pointer'
                     onClick={() => scrollTo(href.substring(1))}
                   >
                     {name}
@@ -117,7 +117,14 @@ const Navbar = () => {
             {menu.map(({ name, href }, index) => {
               return (
                 <li key={index}>
-                  <a className='font-ovo' href={href} onClick={closeMenu}>
+                  <a
+                    className='font-ovo cursor-pointer'
+                    href={href}
+                    onClick={() => {
+                      scrollTo(href.substring(1));
+                      closeMenu();
+                    }}
+                  >
                     {name}
                   </a>
                 </li>
