@@ -1,15 +1,25 @@
 import Container from '@mui/material/Container';
+import Snackbar from '@mui/material/Snackbar';
 import { useState } from 'react';
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
   const [isSending, setIsSending] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
+  const hideDuration = 6000;
+
+  const isSomeFormEmpty = () => {
+    return !name || !email || !message;
+  };
 
   const sendEmail = async (e) => {
-    if (isSending) return;
     e.preventDefault();
+    if (isSending) return;
+    if (isSomeFormEmpty()) return;
     setIsSending(true);
     try {
       await fetch('/api/send', {
@@ -25,18 +35,30 @@ const Contact = () => {
           message,
         }),
       });
+      setIsSent(true);
     } catch (error) {
       console.error('Error sending email:', error);
     } finally {
-      setIsSending(false);
       clearForm();
     }
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setIsSent(false);
   };
 
   const clearForm = () => {
     setName('');
     setEmail('');
     setMessage('');
+    setIsSending(false);
+    setTimeout(() => {
+      setIsSent(false);
+    }, hideDuration);
   };
 
   return (
@@ -86,6 +108,17 @@ const Contact = () => {
           </button>
         </div>
       </form>
+
+      {isSent && (
+        <Snackbar
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+          open={isSent}
+          autoHideDuration={hideDuration}
+          onClose={handleClose}
+          message={`${isSent ? 'Thank you for your interest! I will get back to you soon.' : 'Failed to send message. Please try again later.'}`}
+          key={'bottom' + 'center'}
+        />
+      )}
     </Container>
   );
 };
