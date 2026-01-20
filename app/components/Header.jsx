@@ -13,8 +13,8 @@ const Header = () => {
         <Image src={apw} alt='' className='rounded-full w-32' />
       </div>
       <h3 className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo'>
-        Hi! I'm Aphiwat Leelasawatsuk{' '}
-        <Image src={assets.hand_icon} alt='' className='w-6' />
+        Aphiwat Leelasawatsuk
+        {/* <Image src={assets.hand_icon} alt='' className='w-6' /> */}
       </h3>
       <h1 className='text-3xl sm:text-6xl font-ovo max-w-3xl'>
         Full Stack Developer

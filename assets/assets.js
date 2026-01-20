@@ -78,24 +78,28 @@ export const assets = {
 
 export const workData = [
   {
-    title: 'Frontend project',
-    description: 'Web Design',
-    bgImage: '/work-1.png',
+    title: 'ThaiCondoHomeLand',
+    description: 'Real estate App',
+    bgImage: '/thaicondo.png',
+    url: 'https://thaicondohomeland.netlify.app/',
   },
   {
-    title: 'Geo based app',
-    description: 'Mobile App',
-    bgImage: '/work-2.png',
+    title: 'APW Shop',
+    description: 'E-Commerce App',
+    bgImage: '/apwshop.png',
+    url: 'https://apwshop.netlify.app/',
   },
   {
-    title: 'Photography site',
-    description: 'Web Design',
-    bgImage: '/work-3.png',
+    title: 'Merry Match',
+    description: 'Dating App',
+    bgImage: '/merryMatch.png',
+    url: 'https://merry-match-client.onrender.com/',
   },
   {
-    title: 'UI/UX designing',
-    description: 'UI/UX Design',
-    bgImage: '/work-4.png',
+    title: 'Netflix Recommend',
+    description: 'Authenticated App',
+    bgImage: '/netflix.png',
+    url: 'https://apwnetfliq.netlify.app/signin',
   },
 ];
 

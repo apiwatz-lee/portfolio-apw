@@ -9,7 +9,7 @@ const About = () => {
       <h4 className='text-center mb-2 text-lg font-ovo'>Introduction</h4>
       <h2 className='text-center text-5xl font-ovo'>About me</h2>
 
-      <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
+      <div className='flex w-full flex-col lg:flex-row items-center lg:items-start gap-20 my-20'>
         <div className='w-64 sm:w-80 rounded-3xl max-w-none'>
           <Image src={apwCover} alt='' className='w-full rounded-3xl' />
         </div>

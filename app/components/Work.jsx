@@ -9,16 +9,16 @@ const Work = () => {
       <h2 className='text-center text-5xl font-ovo'>My latest work</h2>
 
       <p className='text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo'>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos,
-        adipisci? Sed assumenda impedit atque eaque autem maxime totam,
+        Here are a few projects I've worked on recently
       </p>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-10'>
-        {workData.map(({ title, description, bgImage }, index) => (
+        {workData.map(({ title, description, bgImage, url }, index) => (
           <div
             key={index}
             style={{ backgroundImage: `url(${bgImage})` }}
             className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
+            onClick={() => window.open(url, '_blank')}
           >
             <div className='bg-white w-10/12 rounded-md absolute bottom-5 left-[8%] -translalte-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7'>
               <div>
