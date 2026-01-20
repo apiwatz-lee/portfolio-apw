@@ -16,11 +16,13 @@
     "@mui/material": "^7.3.7",
     "next": "15.2.8",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "resend": "^6.8.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/node": "25.0.9",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
     "tailwindcss": "^4"
