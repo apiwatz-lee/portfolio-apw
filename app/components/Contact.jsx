@@ -5,23 +5,32 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isSending, setIsSending] = useState(false);
 
   const sendEmail = async (e) => {
+    if (isSending) return;
     e.preventDefault();
-    await fetch('/api/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        to: 'apiwatz.lee@gmail.com',
-        from: `${name}`,
-        subject: 'Intersested in your portfolio!',
-        email,
-        message,
-      }),
-    });
-    clearForm();
+    setIsSending(true);
+    try {
+      await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: 'apiwatz.lee@gmail.com',
+          from: `${name}`,
+          subject: 'Intersested in your portfolio!',
+          email,
+          message,
+        }),
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+    } finally {
+      setIsSending(false);
+      clearForm();
+    }
   };
 
   const clearForm = () => {
@@ -70,6 +79,7 @@ const Contact = () => {
         <div className='text-center'>
           <button
             type='submit'
+            disabled={isSending}
             className='bg-[#202020] text-white rounded-full px-6 py-2 hover:bg-[#202020] transition-colors duration-300 cursor-pointer'
           >
             Send Message
