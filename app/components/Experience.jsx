@@ -18,6 +18,7 @@ export default function AlternateReverseTimeline() {
       company: 'The Thai Chamber of Commerce and Board of Trade of Thailand',
       position: 'Web Developer',
       url: 'https://www.thaichamber.org',
+      img: '/thaichamber.jpg',
     },
 
     {
@@ -28,6 +29,7 @@ export default function AlternateReverseTimeline() {
       company: 'Xsurface Co., Ltd.',
       position: 'Full Stack Developer',
       url: 'https://xsurface.com',
+      img: '/xsurface.jpg',
     },
     {
       time: 'Jun 2023 - Oct 2023',
@@ -37,15 +39,17 @@ export default function AlternateReverseTimeline() {
       company: 'TechUp Bootcamp',
       position: 'Full Stack Web Development Student',
       url: 'https://www.techupth.com',
+      img: '/techup.jpg',
     },
     {
       time: 'Sep 2019 - Jun 2023',
       title: 'Procurement Supervisor at Southland Rubber Co., Ltd.',
       description:
-        'Led procurement operations and performed data analysis on raw material purchasing and inventory management to improve cost efficiency and decision-making. Gained strong business domain knowledge that later supported my transition into software development.',
+        'Performed data analysis on raw material purchasing and inventory management to improve cost efficiency and decision-making. Gained strong business domain knowledge that later supported my transition into software development.',
       company: 'Southland Rubber Co., Ltd.',
       position: 'Procurement Supervisor',
       url: 'https://www.southlandholding.com',
+      img: '/southland.jpg',
     },
   ];
 
@@ -57,7 +61,7 @@ export default function AlternateReverseTimeline() {
       <h2 className='text-center text-5xl font-ovo'>Experiences</h2>
       <Timeline
         position={isMobile ? 'right' : 'alternate'}
-        className='my-20'
+        className='my-20 flex items-center justify-center'
         sx={{
           '& .MuiTimelineItem-missingOppositeContent:before': {
             display: isMobile ? 'none' : undefined,
@@ -70,6 +74,7 @@ export default function AlternateReverseTimeline() {
               <TimelineDot />
               {index < timelineItems.length - 1 && <TimelineConnector />}
             </TimelineSeparator>
+
             <TimelineContent className='flex flex-col gap-4'>
               <h3 className='text-xl font-bold'>
                 <span>{item.position}</span> - {''}
@@ -82,11 +87,20 @@ export default function AlternateReverseTimeline() {
                   {item.company}
                 </a>
               </h3>
+
               <span className='text-gray-500'>{item.time}</span>
               <p>{item.description}</p>
             </TimelineContent>
           </TimelineItem>
         ))}
+        <button
+          class='px-10 py-3 border rounded-full bg-black text-white text-center cursor-pointer w-40 mt-10 '
+          onClick={() =>
+            window.open('https://apwlife.netlify.app/aboutme', '_blank')
+          }
+        >
+          see more
+        </button>
       </Timeline>
     </Container>
   );

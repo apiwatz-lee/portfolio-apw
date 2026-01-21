@@ -14,24 +14,27 @@ const About = () => {
           <Image src={apwCover} alt='' className='w-full rounded-3xl' />
         </div>
         <div className='flex-1'>
-          <p className='mb-10 max-w-2xl font-ovo'>
+          <p className='mb-10 lg:max-w-2xl font-ovo text-center lg:text-left w-full'>
             I am a developer who transitioned from business operations into
             software development, combining analytical thinking with modern web
             technologies. My expertise lies in building performant, scalable web
             applications.
           </p>
 
-          <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
-              <li
-                className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer  hover:-translate-y-1 duration-500 hover:shadow-md'
-                key={index}
-              >
-                <Image src={icon} alt={title} className='w-7 mt-3' />
-                <h3 className='my-4 font-semibold text-gray-700'>{title}</h3>
-                <p className='text-gray-600 text-sm'>{description}</p>
-              </li>
-            ))}
+          <ul className='grid grid-cols-1 sm:grid-cols-3 gap-6 lg:max-w-2xl'>
+            {infoList.map(
+              ({ icon, iconDark, title, description, url }, index) => (
+                <li
+                  onClick={() => url && window.open(url, '_blank')}
+                  className={`border-[0.5px] border-gray-400 rounded-xl p-6 ${url ? 'cursor-pointer hover:-translate-y-1 duration-500 hover:shadow-md' : ''}`}
+                  key={index}
+                >
+                  <Image src={icon} alt={title} className='w-7 mt-3' />
+                  <h3 className='my-4 font-semibold text-gray-700'>{title}</h3>
+                  <p className='text-gray-600 text-sm'>{description}</p>
+                </li>
+              ),
+            )}
           </ul>
 
           <h4 className='my-6 text-gray-700 font-ovo'>Tools I use</h4>

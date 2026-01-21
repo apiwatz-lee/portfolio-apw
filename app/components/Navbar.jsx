@@ -92,9 +92,9 @@ const Navbar = () => {
           </ul>
 
           <div className='flex items-center gap-4'>
-            <button className='cursor-pointer'>
+            {/* <button className='cursor-pointer'>
               <Image src={assets.moon_icon} alt='' className='w-6' />
-            </button>
+            </button> */}
 
             <button className='block md:hidden ml-3' onClick={openMenu}>
               <Image src={assets.menu_black} alt='' className='w-6' />
